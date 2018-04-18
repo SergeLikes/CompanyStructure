@@ -27,9 +27,9 @@ public class Accountant extends BusinessEmployee {
     public void supportTeam(TechnicalLead lead) {
         if (this.teamSupported == null) {
             this.teamSupported = new TechnicalLead(lead.getName());
-            LinkedList<SoftwareEngineer> swees = lead.getSwees();
+            LinkedList<SoftwareEngineer> engineers = lead.getEngineers();
             double bonusBadget = 0.0;
-            for (SoftwareEngineer s : swees) {
+            for (SoftwareEngineer s : engineers) {
                 bonusBadget += s.getBaseSalary();
             }
             bonusBadget += (bonusBadget) * 0.1;
@@ -50,5 +50,4 @@ public class Accountant extends BusinessEmployee {
         String result = super.toString() + " with a budget of " + Double.toString(super.getBonusBadget()) + " and is supporting " + teamSupported.getName();
         return result;
     }
-    public abstract String employeeStatus();
 }
