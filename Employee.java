@@ -61,5 +61,5 @@ public abstract class Employee {
         String result = Integer.toString(this.employeeID) + " " + this.name;
         return result;
     }
-
+    public abstract String employeeStatus();
 }
