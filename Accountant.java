@@ -50,4 +50,5 @@ public class Accountant extends BusinessEmployee {
         String result = super.toString() + " with a budget of " + Double.toString(super.getBonusBadget()) + " and is supporting " + teamSupported.getName();
         return result;
     }
+    public abstract String employeeStatus();
 }
